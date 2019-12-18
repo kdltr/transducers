@@ -1,0 +1,16 @@
+chicken-install -v -test
+
+git add -u
+git st
+git diff
+rm transducers
+git clean -n
+git clean -f
+
+csi -s tests/run.scm
+csc transducers.scm -sJ -O3 -debug o
+csc bench.scm -O3
+./bench
+win
+csi
+,l transducers.impl.scm

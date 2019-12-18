@@ -1,0 +1,11 @@
+((synopsis "Composable transformations library")
+ (category lang-exts)
+ (license "…") ; TODO
+ (author "Adrien (Kooda) Ramos")
+ (test-dependencies test)
+ (components
+   (extension transducers
+              (source-dependencies "transducers.impl.scm")
+              (csc-options -O3)
+              (types-file)
+              (inline-file))))
